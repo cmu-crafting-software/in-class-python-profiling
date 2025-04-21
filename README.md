@@ -48,20 +48,20 @@ The generated `cProfile.txt` contains one line of data for each function called.
 
 ```sh
 uv run pyinstrument demo_profile.py
-uv run pyinstrument -r speedscope -o speedscope.json demo_profile.py
+uv run pyinstrument -r speedscope -o pyinstrument.json demo_profile.py
 ```
 
-The first command prints some human-readable statistics directly to the terminal. The second generates a `speedscope.json` file which you can drag and drop into the speedscope webapp: https://www.speedscope.app/
+The first command prints some human-readable statistics directly to the terminal. The second generates a `pyinstrument.json` file which you can drag and drop into the speedscope webapp: https://www.speedscope.app/
 
 ### py-spy
 
 [py-spy](https://github.com/benfred/py-spy) is a third-party statistical profiler that is noninvasive, and can attach to running processes on the fly.
 
 ```sh
-uv run sudo py-spy record -o profile.svg -- python demo_profile.py
+uv run sudo py-spy record -f speedscope -o py-spy.json -- python demo_profile.py
 ```
 
-The generated `profile.svg` file contains a flamegraph of the various function calls in the program.
+Just like the previous pyinstrument example, the generated `py-spy.json` file can be opened in speedscope to see a visualization of the profiling results.
 
 ### Scalene
 
