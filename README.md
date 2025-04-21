@@ -18,7 +18,7 @@ mkdir outputs
 
 Each subsection under here gives a brief description of a different Python profiling tool, followed by a shell command to run that tool on the `demo_profile.py` script in this repo. Before diving into the details, here's a high-level summary table of the strengths and weaknesses of the different tools we'll look at:
 
-| Feature / Tool         | `cProfile`     | pyinstrument         | py-spy                | Scalene            |
+| Feature                | `cProfile`     | pyinstrument         | py-spy                | Scalene            |
 | ---------------------- | -------------- | -------------------- | --------------------- | ------------------ |
 | 📦 Installation needed | ❌ (in stdlib) | ✅ (`uv add`)        | ✅ (`uv add`)         | ✅ (`uv add`)      |
 | 🔍 Views native code   | ❌             | ❌                   | ✅                    | ✅                 |
