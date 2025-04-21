@@ -34,7 +34,7 @@ Each subsection under here gives a brief description of a different Python profi
 
 ### `cProfile`
 
-`cProfile` is a [deterministic profiler built into the Python standard library](https://docs.python.org/3/library/profile.html).
+`cProfile` is a [deterministic profiler built into the Python standard library](https://docs.python.org/3/library/profile.html) that is simple, robust, and well-supported.
 
 ```sh
 uv run python -m cProfile -s tottime demo_profile.py > cProfile.txt
@@ -42,7 +42,7 @@ uv run python -m cProfile -s tottime demo_profile.py > cProfile.txt
 
 ### pyinstrument
 
-[pyinstrument](https://github.com/joerick/pyinstrument) is a third-party [statistical profiler][].
+[pyinstrument](https://github.com/joerick/pyinstrument) is a third-party [statistical profiler](https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf) that gives very readable output.
 
 ```sh
 uv run pyinstrument demo_profile.py
@@ -50,7 +50,7 @@ uv run pyinstrument demo_profile.py
 
 ### py-spy
 
-[py-spy](https://github.com/benfred/py-spy) is a third-party [statistical profiler][].
+[py-spy](https://github.com/benfred/py-spy) is a third-party statistical profiler that is noninvasive, and can attach to running processes on the fly.
 
 ```sh
 uv run sudo py-spy record -o profile.svg -- python demo_profile.py
@@ -58,10 +58,8 @@ uv run sudo py-spy record -o profile.svg -- python demo_profile.py
 
 ### Scalene
 
-[Scalene](https://github.com/plasma-umass/scalene) is a third-party CPU, GPU, and memory profiler.
+[Scalene](https://github.com/plasma-umass/scalene) is a third-party statistical profiler for CPU, GPU, and memory.
 
 ```sh
 uv run scalene demo_profile.py
 ```
-
-[statistical profiler]: https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf
