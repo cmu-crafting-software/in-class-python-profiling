@@ -7,12 +7,7 @@ gh repo clone cmu-crafting-software/in-class-python-profiling
 cd in-class-python-profiling
 ```
 
-Install [uv](https://docs.astral.sh/uv/) and [Python](https://docs.astral.sh/uv/guides/install-python/) if you haven't already. Then install Python dependencies and create an empty folder to store the profiling outputs we're going to generate:
-
-```sh
-uv sync
-mkdir outputs
-```
+Install [uv](https://docs.astral.sh/uv/) and [Python](https://docs.astral.sh/uv/guides/install-python/) if you haven't already.
 
 ## Profilers
 
