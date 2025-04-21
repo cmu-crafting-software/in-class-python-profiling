@@ -33,11 +33,12 @@ def native_torch():
 
 
 def main():
-    cpu_bound(20)
-    io_bound()
-    memory_hog()
-    native_numpy()
-    native_torch()
+    for _ in range(3):
+        cpu_bound(20)
+        io_bound()
+        memory_hog()
+        native_numpy()
+        native_torch()
 
 
 if __name__ == "__main__":
