@@ -83,6 +83,15 @@ wheels = [
 ]
 
 [[package]]
+name = "gprof2dot"
+version = "2025.4.14"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bb/fd/cad13fa1f7a463a607176432c4affa33ea162f02f58cc36de1d40d3e6b48/gprof2dot-2025.4.14.tar.gz", hash = "sha256:35743e2d2ca027bf48fa7cba37021aaf4a27beeae1ae8e05a50b55f1f921a6ce", size = 39536 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/ed/89d760cb25279109b89eb52975a7b5479700d3114a2421ce735bfb2e7513/gprof2dot-2025.4.14-py3-none-any.whl", hash = "sha256:0742e4c0b4409a5e8777e739388a11e1ed3750be86895655312ea7c20bd0090e", size = 37555 },
+]
+
+[[package]]
 name = "idna"
 version = "3.10"
 source = { registry = "https://pypi.org/simple" }
@@ -103,6 +112,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "gprof2dot" },
     { name = "py-spy" },
     { name = "pyinstrument" },
     { name = "scalene" },
@@ -117,6 +127,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "gprof2dot", specifier = ">=2025.4.14" },
     { name = "py-spy", specifier = ">=0.4.0" },
     { name = "pyinstrument", specifier = ">=5.0.1" },
     { name = "scalene", specifier = ">=1.5.51" },

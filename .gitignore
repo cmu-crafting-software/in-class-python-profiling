@@ -1,5 +1,7 @@
 /.direnv/
 /.envrc
+/cProfile.pstats
+/cProfile.svg
 /cProfile.txt
 /profile.html
 /profile.json

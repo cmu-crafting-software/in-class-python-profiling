@@ -19,6 +19,7 @@
           with pkgs;
           mkShellNoCC {
             buildInputs = [
+              graphviz
               nixfmt-rfc-style
               python3
               uv
