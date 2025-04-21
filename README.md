@@ -40,13 +40,18 @@ Each subsection under here gives a brief description of a different Python profi
 uv run python -m cProfile -s tottime demo_profile.py > cProfile.txt
 ```
 
+The generated `cProfile.txt` contains one line of data for each function called.
+
 ### pyinstrument
 
 [pyinstrument](https://github.com/joerick/pyinstrument) is a third-party [statistical profiler](https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf) that gives very readable output.
 
 ```sh
 uv run pyinstrument demo_profile.py
+uv run pyinstrument -r speedscope -o speedscope.json demo_profile.py
 ```
+
+The first command prints some human-readable statistics directly to the terminal. The second generates a `speedscope.json` file which you can drag and drop into the speedscope webapp: https://www.speedscope.app/
 
 ### py-spy
 
@@ -56,6 +61,8 @@ uv run pyinstrument demo_profile.py
 uv run sudo py-spy record -o profile.svg -- python demo_profile.py
 ```
 
+The generated `profile.svg` file contains a flamegraph of the various function calls in the program.
+
 ### Scalene
 
 [Scalene](https://github.com/plasma-umass/scalene) is a third-party statistical profiler for CPU, GPU, and memory.
@@ -63,3 +70,5 @@ uv run sudo py-spy record -o profile.svg -- python demo_profile.py
 ```sh
 uv run scalene demo_profile.py
 ```
+
+This command opens a browser tab summarizing the data from profiling.
