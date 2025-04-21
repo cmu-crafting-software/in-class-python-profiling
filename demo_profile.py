@@ -33,9 +33,15 @@ def native_torch():
 
 
 def main():
-    for _ in range(3):
+    for i in range(3):
+        start = time.time()
+        print(f"iteration {i}")
         cpu_bound(35)
+        middle = time.time()
+        print(f"finished `cpu_bound`: {middle - start}")
         io_bound()
+        end = time.time()
+        print(f"finished `io_bound`: {end - middle}")
         memory_hog()
         native_numpy()
         native_torch()
