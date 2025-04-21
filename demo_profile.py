@@ -34,7 +34,7 @@ def native_torch():
 
 def main():
     for _ in range(3):
-        cpu_bound(20)
+        cpu_bound(35)
         io_bound()
         memory_hog()
         native_numpy()
